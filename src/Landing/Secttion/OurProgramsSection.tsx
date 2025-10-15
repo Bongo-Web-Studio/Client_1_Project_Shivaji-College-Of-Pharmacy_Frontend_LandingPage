@@ -42,7 +42,7 @@ const programs: Program[] = [
  */
 const OurProgramsSection: React.FC = () => {
   return (
-    <section className="flex flex-col w-full min-h-screen bg-white font-sans px-6 py-10 md:px-10 lg:px-16">
+    <section className="flex flex-col w-full min-h-screen bg-white  p-8">
       {/* Header */}
       <h4 className="text-sm md:text-lg text-gray-600 italic mb-4">
         Our Programs
@@ -52,11 +52,11 @@ const OurProgramsSection: React.FC = () => {
       <div className="w-full flex flex-col lg:flex-row justify-between items-start gap-8">
         {/* Left Text Section */}
         <div className="w-full lg:w-2/3">
-          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-semibold leading-tight">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-medium leading-tight">
             Empowering Future Pharmacists <br />
             Through{" "}
-            <span className="text-yellow-600">Quality Education</span> and <br />
-            Real-World Excellence
+            <span   style={{ fontFamily: "InstrumentSerif" }}  className="text-yellow-600">Quality Education</span> and 
+            RealWorld Excellence
           </h1>
         </div>
 
@@ -71,7 +71,7 @@ const OurProgramsSection: React.FC = () => {
       </div>
 
       {/* Program List */}
-      <div className="w-full mt-12 space-y-10">
+      <div className="w-full mt-12 space-y-10 ">
         {programs.map((program) => (
           <div
             key={program.id}
@@ -83,19 +83,19 @@ const OurProgramsSection: React.FC = () => {
                 {program.id}
               </h1>
 
-              <div>
-                <h2 className="text-xl sm:text-2xl font-semibold mb-1">
+              <div className="flex  flex-col  md:flex-row w-full">
+                <h2 className=" text-2xl md:text-4xl font-medium mb-1  w-[70%] ">
                   {program.title}
                 </h2>
-                <p className="text-gray-600 text-sm sm:text-base leading-relaxed">
+                <p className="text-gray-600 text-sm sm:text-base leading-relaxed  w-[70%] ">
                   {program.description}
                 </p>
               </div>
             </div>
 
             {/* Right Section: Arrow Button */}
-            <button className="text-black hover:text-yellow-700 transition-all duration-200 bg-gray-100 p-3 rounded-xl border-2 flex justify-center items-center">
-              <FaArrowRight size={18} />
+            <button className="text-black hover:text-yellow-700 transition-all duration-200 bg-[#F3F4F6]  border-gray-200 p-5 rounded-3xl border-2 flex justify-center items-center">
+              <FaArrowRight size={25} />
             </button>
           </div>
         ))}

@@ -56,7 +56,7 @@ const OurFacilitiesSection: React.FC = () => {
       subtext: "Digital Lecture Halls",
       description:
         "Spacious classrooms equipped with audio-visual tools, smart boards, and e-learning support.",
-      tagline: "Classrooms",
+      tagline: "Classroom",
     },
     {
       image:
@@ -108,8 +108,8 @@ const OurFacilitiesSection: React.FC = () => {
   const slide = slides[currentSlide];
 
   return (
-    <div className="px-4 sm:px-6 lg:px-10 py-6">
-      <div className="relative w-full h-[70vh] sm:h-[80vh] md:h-[90vh] lg:h-screen overflow-hidden text-white rounded-3xl sm:rounded-[40px] shadow-xl">
+    <div className=" p-2 md:p-4">
+      <div className="relative w-full h-[70vh] sm:h-[80vh] md:h-[90vh] lg:h-screen overflow-hidden text-white rounded-4xl sm:rounded-[50px] shadow-xl">
         {/* Background Image */}
         <img
           src={slide.image}
@@ -136,7 +136,7 @@ const OurFacilitiesSection: React.FC = () => {
 
           {/* Bottom-right Description */}
           <div className="flex justify-end">
-            <div className="bg-black/30 p-3 sm:p-4 rounded-lg w-full sm:w-auto max-w-sm md:max-w-md text-white">
+            <div className=" p-3 sm:p-4 rounded-lg w-full sm:w-auto max-w-sm md:max-w-md text-white">
               <p className="font-semibold text-lg sm:text-2xl line-clamp-1">
                 {slide.subtext}
               </p>
@@ -147,15 +147,15 @@ const OurFacilitiesSection: React.FC = () => {
           </div>
 
           {/* Slide Number and Tagline */}
-          <div className="flex flex-col mt-4 relative h-[4rem] sm:h-[6rem]">
-            <span className="text-base sm:text-lg font-medium line-clamp-1">
+          <div className="flex flex-col  relative h-[4rem] sm:h-[6rem]">
+            <span className="text-base sm:text-lg font-medium line-clamp-1 ">
               <span className="text-4xl sm:text-6xl">{slide.number1}</span>
               <span className="text-xl sm:text-3xl text-gray-300">
                 /{slide.number2}
               </span>
             </span>
 
-            <h2 className="absolute left-0 bottom-[-10px] sm:bottom-[-30px] text-4xl sm:text-6xl lg:text-[150px] font-bold opacity-80 uppercase line-clamp-1">
+            <h2 className="absolute left-0 bottom-[-12px] sm:bottom-[80px] text-4xl sm:text-6xl lg:text-[150px] font-bold opacity-80 uppercase line-clamp-1">
               {slide.tagline}
             </h2>
           </div>

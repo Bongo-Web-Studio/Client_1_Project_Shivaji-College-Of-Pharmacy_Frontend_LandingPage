@@ -14,52 +14,52 @@ const newsItems: NewsItem[] = [
   {
     id: 1,
     image:
-      "https://plus.unsplash.com/premium_photo-1682974407026-581fe0e550ea?fm=jpg&q=60&w=3000",
+      "https://shivajipharma.com/uploads/gallery/1759213659_30f624274c91049b3c88.jpg",
     date: "10 Jun 2025",
-    title:
-      "Shivaji Pharmacy College Hosts National Seminar on Advances in Pharmaceutical Sciences",
+    title: "Shivaji Pharmacy College Hosts World Pharmacist Day Celebration",
     readTime: "6 min Read",
   },
   {
     id: 2,
     image:
-      "https://plus.unsplash.com/premium_photo-1682974407026-581fe0e550ea?fm=jpg&q=60&w=3000",
+      "https://shivajipharma.com/uploads/gallery/1756968290_8cd92d028c673e4e4eca.jpg",
     date: "11 Jun 2025",
     title:
-      "Final-Year B.Pharm Students Achieve 100% Placement in Top Pharma Companies",
+      "Hospital Pharmacy Visit Our Pharmacy Student Visited Panchshil Medical located in Hedgewar Hospital, Chhatrapati Sambhajinagar",
     readTime: "4 min Read",
   },
   {
     id: 3,
     image:
-      "https://plus.unsplash.com/premium_photo-1682974407026-581fe0e550ea?fm=jpg&q=60&w=3000",
+      "https://shivajipharma.com/uploads/gallery/1756969639_57bf97dcf832562fbc6f.jpg",
     date: "12 Jun 2025",
     title:
-      "Faculty Members Recognized by PCI for Contributions to Pharmacy Education",
+      " Annual Gathering held at Shri Chhatrapati Shivaji College of Pharmacy",
     readTime: "5 min Read",
   },
   {
     id: 4,
     image:
-      "https://plus.unsplash.com/premium_photo-1682974407026-581fe0e550ea?fm=jpg&q=60&w=3000",
+      "https://shivajipharma.com/uploads/gallery/1759215048_c5c1cc86ff7a324cdd7b.jpg",
     date: "13 Jun 2025",
-    title: "New MoU Signed with Global Pharmaceutical R&D Companies",
+    title: "Marathwada Mukti Sangram Din 17th September 2025 Celebration at Shivaji Pharmacy College",
     readTime: "7 min Read",
   },
   {
     id: 5,
     image:
-      "https://plus.unsplash.com/premium_photo-1682974407026-581fe0e550ea?fm=jpg&q=60&w=3000",
+      "https://shivajipharma.com/uploads/gallery/1759216108_dc1c66372d11261001ad.jpg",
     date: "14 Jun 2025",
-    title: "AI-Based Tools Integrated into the Pharmacy Curriculum",
+    title: "Teacher Day Celebration!!Teachers' Day was celebrated with great enthusiasm at Shri Chhatrapati Shivaji College of Pharmacy. The highlight of this program was that the students played the role of teachers and made the day unforgettable under their guidance. On this occasion, all the respected teachers of the college were felicitated on behalf of the students. The students experienced teaching from the role of teachers and expressed their gratitude towards the teachers. At the end of the program, the Principal of the college, Dr. Rahul Kshirsagar Sir, gave valuable guidance to the students, which will definitely be useful to them in the future. Heartfelt thanks to all the students and teachers who worked hard to make this day a successful event.",
     readTime: "6 min Read",
   },
   {
     id: 6,
     image:
-      "https://plus.unsplash.com/premium_photo-1682974407026-581fe0e550ea?fm=jpg&q=60&w=3000",
+      "https://shivajipharma.com/uploads/gallery/1756972287_3e2ac5dfa8a3b164ae05.jpg",
     date: "15 Jun 2025",
-    title: "Shivaji College Celebrates World Pharmacist Day with Awareness Drives",
+    title:
+      "Annual Gathering Sports Events",
     readTime: "3 min Read",
   },
 ];
@@ -70,7 +70,7 @@ const NewsSection: React.FC = () => {
       {/* Section Heading */}
       <div className="text-center">
         <h2 className="text-lg italic text-gray-600">News</h2>
-        <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-semibold mt-4">
+        <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-medium mt-4">
           Discover the Latest News in SCSC of Pharmacy
         </h1>
       </div>
@@ -92,7 +92,9 @@ const NewsSection: React.FC = () => {
                 {item.title}
               </h3>
               <div className="flex justify-between items-center mt-4">
-                <span className="text-gray-400 text-sm sm:text-base">{item.readTime}</span>
+                <span className="text-gray-400 text-sm sm:text-base">
+                  {item.readTime}
+                </span>
                 <span className="flex items-center gap-2 text-sm sm:text-base text-gray-700">
                   Read more
                   <span className="p-2 bg-gray-100 rounded-lg border-2 border-gray-300">

@@ -23,9 +23,9 @@ const eventSections: EventSection = [
       title: "Pharma Research Summit",
       year: "2025",
       location: "Central Auditorium",
-      titleSize: "text-4xl md:text-3xl sm:text-2xl",
-      yearSize: "text-3xl md:text-2xl sm:text-xl",
-      locationSize: "text-4xl md:text-2xl sm:text-xl",
+      titleSize: "text-2xl md:text-3xl sm:text-2xl",
+      yearSize: "text-xl md:text-2xl sm:text-xl",
+      locationSize: "text-xl md:text-2xl sm:text-xl",
     },
     {
       width: "13cm",
@@ -36,7 +36,7 @@ const eventSections: EventSection = [
       location: "Open Grounds",
       titleSize: "text-2xl md:text-xl sm:text-lg",
       yearSize: "text-xl md:text-lg sm:text-base",
-      locationSize: "text-2xl md:text-xl sm:text-lg",
+      locationSize: "text-xl md:text-xl sm:text-lg",
     },
   ],
   [
@@ -47,9 +47,9 @@ const eventSections: EventSection = [
       title: "Industrial Visit: Cipla Ltd",
       year: "2025",
       location: "Goa Facility",
-      titleSize: "text-4xl md:text-3xl sm:text-2xl",
-      yearSize: "text-3xl md:text-2xl sm:text-xl",
-      locationSize: "text-4xl md:text-2xl sm:text-xl",
+      titleSize: "text-2xl md:text-3xl sm:text-2xl",
+      yearSize: "text-xl md:text-2xl sm:text-xl",
+      locationSize: "text-xl md:text-2xl sm:text-xl",
     },
   ],
   [
@@ -62,7 +62,7 @@ const eventSections: EventSection = [
       location: "Seminar Hall B",
       titleSize: "text-2xl md:text-xl sm:text-lg",
       yearSize: "text-xl md:text-lg sm:text-base",
-      locationSize: "text-2xl md:text-xl sm:text-lg",
+      locationSize: "text-xl md:text-xl sm:text-lg",
     },
     {
       width: "16cm",
@@ -71,9 +71,9 @@ const eventSections: EventSection = [
       title: "Alumni Meet & Awards Night",
       year: "2025",
       location: "Main Auditorium",
-      titleSize: "text-4xl md:text-3xl sm:text-2xl",
-      yearSize: "text-3xl md:text-2xl sm:text-xl",
-      locationSize: "text-4xl md:text-2xl sm:text-xl",
+      titleSize: "text-2xl md:text-3xl sm:text-2xl",
+      yearSize: "text-xl md:text-2xl sm:text-xl",
+      locationSize: "text-xl md:text-2xl sm:text-xl",
     },
   ],
 ];
@@ -83,10 +83,10 @@ const EventsSection: React.FC = () => {
     <div className="bg-white p-6 flex flex-col justify-center items-center w-full">
       {/* Section Headers */}
       <h1 className="text-base sm:text-lg text-gray-600">Events</h1>
-      <h1 className="text-4xl md:text-5xl lg:text-6xl text-center font-semibold mt-2">
+      <h1 className="text-4xl md:text-5xl lg:text-6xl text-center font-medium mt-2">
         Lectures, Conferences, Cultural
       </h1>
-      <h1 className="text-4xl md:text-5xl lg:text-6xl text-center font-semibold">
+      <h1 className="text-4xl md:text-5xl lg:text-6xl text-center font-medium">
         Moments & More
       </h1>
 
@@ -94,7 +94,7 @@ const EventsSection: React.FC = () => {
       {eventSections.map((row, rowIndex) => (
         <div
           key={rowIndex}
-          className={`w-full flex flex-col sm:flex-row flex-wrap justify-center items-start gap-6 ${
+          className={`w-full flex flex-col sm:flex-row flex-wrap justify-center items-start md:gap-[10rem]  ${
             rowIndex === 1 ? "mt-10 md:mt-16" : "mt-20"
           }`}
         >
@@ -118,7 +118,7 @@ const EventsSection: React.FC = () => {
               {/* Event Details */}
               <div className="w-full flex mt-4 justify-between items-start">
                 <div className="flex flex-col justify-start items-start w-[60%]">
-                  <h1 className={`${event.titleSize} font-semibold`}>
+                  <h1 className={`${event.titleSize} font-medium`}>
                     {event.title}
                   </h1>
                   <h1 className={`${event.yearSize} text-gray-400`}>

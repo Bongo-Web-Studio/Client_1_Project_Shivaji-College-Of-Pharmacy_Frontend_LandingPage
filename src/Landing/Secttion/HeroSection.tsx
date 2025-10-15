@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { motion, type  Variants } from "framer-motion";
+import { motion, type Variants } from "framer-motion";
 
 interface Button {
   label: string;
@@ -65,27 +65,23 @@ const HeroSection: React.FC = () => {
   // Description "snap from below" animation
   const descriptionVariant: Variants = {
     hidden: { opacity: 0, y: 50, filter: "blur(6px)" },
-    visible: { opacity: 1, y: 0, filter: "blur(0px)", transition: { duration: 0.6, ease: "easeOut", delay: 1.2 } },
+    visible: {
+      opacity: 1,
+      y: 0,
+      filter: "blur(0px)",
+      transition: { duration: 0.6, ease: "easeOut", delay: 1.2 },
+    },
   };
 
-  const titleWords = `${beforeHighlight}${heroData.highlight}${afterHighlight}`.split(" ");
+  const titleWords =
+    `${beforeHighlight}${heroData.highlight}${afterHighlight}`.split(" ");
 
   return (
-    <section className="text-black text-center overflow-hidden px-4 sm:px-6 md:px-12 lg:px-20 py-12 lg:py-24">
-      {/* Trust Badge */}
-      <motion.div
-        className="text-sm sm:text-base text-gray-500 mb-4"
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ duration: 1, delay: 0.3 }}
-      >
-        {heroData.trustBadge}
-      </motion.div>
-
+    <section className="text-black text-center overflow-hidden px-4 sm:px-6 md:px-12 lg:px-20 py-2"> 
       {/* Main Title */}
       <motion.h1
         style={{ fontFamily: "InstrumentSerif" }}
-        className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl 2xl:text-8xl max-w-4xl lg:max-w-5xl mx-auto flex flex-wrap justify-center text-[#0D2048] font-semibold leading-tight"
+        className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl 2xl:text-9xl max-w-4xl lg:max-w-5xl mx-auto flex flex-wrap justify-center text-[#0D2048]  leading-tight"
         initial="hidden"
         animate="visible"
         variants={headingVariant}
@@ -93,7 +89,9 @@ const HeroSection: React.FC = () => {
         {titleWords.map((word, i) => (
           <motion.span
             key={i}
-            className={word === heroData.highlight ? "text-[#E21E22] font-bold" : ""}
+            className={
+              word === heroData.highlight ? "text-[#E21E22] font-bold" : ""
+            }
             variants={wordVariant}
             initial="hidden"
             animate="visible"
@@ -107,7 +105,7 @@ const HeroSection: React.FC = () => {
 
       {/* Description */}
       <motion.p
-        className="text-base sm:text-lg md:text-xl text-gray-500 mt-6 max-w-3xl sm:max-w-2xl mx-auto italic"
+        className="text-sm sm:text-lg md:text-xl text-gray-500 mt-6 max-w-3xl sm:max-w-2xl mx-auto "
         variants={descriptionVariant}
         initial="hidden"
         animate="visible"
@@ -124,15 +122,9 @@ const HeroSection: React.FC = () => {
       >
         <Link
           to={heroData.primaryBtn.link}
-          className="bg-[#0D2048] text-white px-6 py-3 sm:px-8 sm:py-4 rounded-lg font-semibold text-sm sm:text-base transition-colors duration-300"
+          className="bg-[#0D2048] text-white px-6 py-3 sm:px-8 sm:py-4 rounded-2xl  text-lg sm:text-xl transition-colors duration-300"
         >
           {heroData.primaryBtn.label}
-        </Link>
-        <Link
-          to={heroData.secondaryBtn.link}
-          className="bg-white text-black hover:bg-gray-200 px-6 py-3 sm:px-8 sm:py-4 rounded-lg font-semibold text-sm sm:text-base transition-colors duration-300"
-        >
-          {heroData.secondaryBtn.label}
         </Link>
       </motion.div>
     </section>

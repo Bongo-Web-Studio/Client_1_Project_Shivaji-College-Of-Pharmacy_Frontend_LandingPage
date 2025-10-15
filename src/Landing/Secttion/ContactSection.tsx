@@ -33,12 +33,12 @@ const ContactSection: React.FC = () => {
   };
 
   return (
-    <div className="p-6 mt-[4cm] mb-[4cm] sm:mt-[8vh] sm:mb-[8vh]">
+    <div className=" mt-[4cm] mb-[4cm] sm:mt-[8vh] sm:mb-[8vh] p-4 md:p-10 ">
       <section className="w-full flex flex-col md:flex-row bg-white gap-8">
         {/* Left Text Section */}
-        <div className="w-full md:w-1/2 mb-10 md:mb-0 flex flex-col justify-center">
+        <div className="w-full md:w-1/2  flex flex-col justify-start  ">
           <p className="text-lg text-gray-700 mb-3 italic">Contact Us</p>
-          <h1 className="text-4xl sm:text-5xl md:text-6xl font-semibold mb-4 leading-tight">
+          <h1 className="text-4xl sm:text-5xl md:text-6xl font-medium mb-4 leading-tight">
             Have Questions? <br />
             We’d Love to Hear <br />
             From You.
@@ -64,7 +64,7 @@ const ContactSection: React.FC = () => {
                   onChange={handleChange}
                   type="text"
                   placeholder="Enter your first name"
-                  className="w-full px-4 py-2 border rounded-lg text-sm focus:outline-none italic"
+                  className="w-full px-4 py-2 border border-gray-200 bg-white rounded-lg text-sm focus:outline-none italic"
                   required
                 />
               </div>
@@ -78,7 +78,7 @@ const ContactSection: React.FC = () => {
                   onChange={handleChange}
                   type="text"
                   placeholder="Enter your last name"
-                  className="w-full px-4 py-2 border rounded-lg text-sm focus:outline-none italic"
+                  className="w-full px-4 py-2 border  border-gray-200 bg-white rounded-lg text-sm focus:outline-none italic"
                   required
                 />
               </div>
@@ -96,7 +96,7 @@ const ContactSection: React.FC = () => {
                   onChange={handleChange}
                   type="email"
                   placeholder="Your email address"
-                  className="w-full px-4 py-2 border rounded-lg text-sm focus:outline-none italic"
+                  className="w-full px-4 py-2 border  border-gray-200 bg-white rounded-lg text-sm focus:outline-none italic"
                   required
                 />
               </div>
@@ -105,7 +105,7 @@ const ContactSection: React.FC = () => {
                   Phone Number
                 </label>
                 <div className="flex items-center">
-                  <span className="px-3 py-2 border border-r-0 rounded-l-lg bg-gray-100 text-sm text-black font-semibold">
+                  <span className="px-3 py-2 border  border-gray-200 bg-white border-r-0 rounded-l-lg  text-sm text-black font-medium">
                     +91
                   </span>
                   <input
@@ -113,7 +113,7 @@ const ContactSection: React.FC = () => {
                     value={formData.phone}
                     onChange={handleChange}
                     type="tel"
-                    className="w-full px-4 py-2 border rounded-r-lg text-sm focus:outline-none"
+                    className="w-full px-4 py-2 border  border-gray-200 bg-white rounded-r-lg text-sm focus:outline-none "
                     placeholder="Mobile number"
                     required
                   />
@@ -130,7 +130,7 @@ const ContactSection: React.FC = () => {
                 name="subject"
                 value={formData.subject}
                 onChange={handleChange}
-                className="w-full px-4 py-2 border rounded-lg text-sm focus:outline-none"
+                className="w-full px-4 py-2 border  border-gray-200 bg-white rounded-lg text-sm focus:outline-none"
                 required
               >
                 <option value="">Select your query</option>
@@ -153,7 +153,7 @@ const ContactSection: React.FC = () => {
                 onChange={handleChange}
                 rows={5}
                 placeholder="Type your message"
-                className="w-full px-4 py-2 border rounded-lg text-sm focus:outline-none"
+                className="w-full px-4 py-2 border  border-gray-200 bg-white rounded-lg text-sm focus:outline-none"
                 required
               />
             </div>
@@ -161,10 +161,10 @@ const ContactSection: React.FC = () => {
             {/* Submit Button */}
             <button
               type="submit"
-              className="flex items-center gap-2 bg-[#0D1531] text-white px-3 py-2 rounded-lg text-md hover:bg-[#111b3b] transition duration-200"
+              className="flex items-center gap-4 bg-[#0D1531] text-white px-2 py-2 rounded-3xl text-xl  transition duration-200"
             >
-              Send Message
-              <span className="px-3 py-3 bg-white text-black rounded-lg">
+<span className="p-2">              Send Message</span>
+              <span className="px-3 py-3 bg-white text-black rounded-2xl">
                 <FaArrowRight size={20} className="rotate-[-40deg]" />
               </span>
             </button>

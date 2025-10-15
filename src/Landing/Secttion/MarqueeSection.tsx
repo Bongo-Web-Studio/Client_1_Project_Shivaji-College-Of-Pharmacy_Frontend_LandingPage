@@ -31,7 +31,7 @@ const MarqueeSection: React.FC = () => {
 
     const tl = gsap.to(marquee, {
       xPercent: -50,
-      duration: 40,
+      duration: 10,
       repeat: -1,
       ease: "linear",
     });
@@ -51,7 +51,7 @@ const MarqueeSection: React.FC = () => {
 
   return (
     <div
-      className="group relative bg-white text-black overflow-hidden border-b-2 h-[12vh] sm:h-[10vh] xs:h-[8vh]"
+      className="group relative bg-white text-[#CA8A04] overflow-hidden border-b-2   h-[10vh] sm:h-[15vh] "
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
     >
@@ -63,7 +63,7 @@ const MarqueeSection: React.FC = () => {
           {newsScroll.map((item) => (
             <span
               key={item.id}
-              className="text-3xl sm:text-2xl xs:text-lg font-semibold flex items-center gap-2"
+              className="text-5xl sm:text-8xl  flex items-center gap-2 text-[#0D2048] mt-5 md:mt-0  cursor-pointer"
             >
               {item.icon} {item.news}
             </span>

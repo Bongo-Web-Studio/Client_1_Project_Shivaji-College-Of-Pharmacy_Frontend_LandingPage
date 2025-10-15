@@ -63,19 +63,19 @@ const CircularSection: React.FC<CircularsProps> = ({
       {/* Section Header */}
       <div className="text-center mb-6">
         <h1 className="text-base sm:text-lg italic text-gray-600">{title}</h1>
-        <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-semibold mt-2 leading-tight max-w-4xl mx-auto">
+        <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-medium mt-2 leading-tight max-w-4xl mx-auto">
           {subtitle}
         </h2>
       </div>
 
       {/* Circular Cards */}
-      <div className="w-full flex flex-wrap justify-center mt-10 gap-6">
+      <div className="w-full flex flex-wrap justify-center mt-10 gap-2">
         {circulars.slice(0, 9).map((item, index) => (
           <div
             key={item.id}
-            className="w-full sm:w-[48%] lg:w-[32%] bg-white rounded-3xl transition-all hover:shadow-xl p-4"
+            className="w-full sm:w-[48%] lg:w-[32%] bg-white rounded-3xl transition-all  p-1"
           >
-            <div className="w-full h-auto rounded-3xl overflow-hidden bg-[#F3F4F6] flex flex-col sm:flex-row justify-between items-center p-6 gap-4">
+            <div className="w-full h-auto rounded-3xl overflow-hidden bg-[#F3F4F6] flex  justify-between items-center p-6 gap-4">
               {/* Date + Number */}
               <div className="text-center sm:text-left">
                 <h3>
@@ -83,8 +83,9 @@ const CircularSection: React.FC<CircularsProps> = ({
                     {item.date}
                   </span>
                 </h3>
-                <p className="text-gray-400 text-sm">
-                  No <span className="text-gray-600 font-medium">{index + 1}</span>
+                <p className="text-gray-400 text-6xl">
+                  No{" "}
+                  <span className="text-gray-600 font-medium">{index + 1}</span>
                 </p>
               </div>
 
@@ -101,10 +102,12 @@ const CircularSection: React.FC<CircularsProps> = ({
               </h4>
 
               <div className="flex justify-between items-center mt-4">
-                <span className="text-sm sm:text-base text-gray-600">{item.source}</span>
-                <span className="text-sm sm:text-base flex gap-2 items-center text-gray-700 cursor-pointer hover:text-[#CA8A04] transition-colors">
+                <span className="text-sm sm:text-base text-gray-600">
+                  {item.source}
+                </span>
+                <span className="flex items-center gap-2 text-sm sm:text-base text-gray-700">
                   See more{" "}
-                  <span className="p-2 bg-gray-100 rounded-lg border text-gray-600">
+                  <span className="p-2 bg-gray-100 rounded-lg border-2 border-gray-300">
                     <FaArrowRight />
                   </span>
                 </span>

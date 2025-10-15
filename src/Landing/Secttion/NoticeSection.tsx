@@ -49,29 +49,26 @@ const circulars: Circular[] = [
 
 const NoticeSection: React.FC = () => {
   return (
-    <section className="bg-white px-6 py-12 flex flex-col justify-center items-center mt-20">
+    <section className="bg-white px-6 py-12 flex flex-col justify-center items-center">
       {/* Heading */}
       <div className="text-center space-y-3">
         <h1 className="text-lg italic text-gray-600">Notices</h1>
-        <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-semibold leading-tight text-gray-900 max-w-4xl mx-auto">
+        <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-medium leading-tight text-gray-900 max-w-4xl mx-auto">
           Discover the Latest Notices in SCSC of Pharmacy
         </h2>
       </div>
 
       {/* Circular Cards */}
-      <div className="w-full flex flex-wrap justify-center gap-6 mt-16">
+      <div className="w-full flex flex-wrap justify-center gap-4 mt-16">
         {circulars.map((item, index) => (
-          <div
-            key={item.id}
-            className="w-full sm:w-[48%] lg:w-[32%] bg-white"
-          >
+          <div key={item.id} className="w-full sm:w-[48%] lg:w-[32%] bg-white">
             {/* Date and Download Section */}
-            <div className="w-full h-auto rounded-3xl bg-gray-100 flex flex-col sm:flex-row justify-between items-center p-6 sm:p-8 gap-4 shadow-sm hover:shadow-md transition-shadow">
+            <div className="w-full h-auto rounded-3xl bg-gray-100 flex  justify-between items-center p-6 sm:p-8 gap-4 ">
               <div className="text-center sm:text-left">
                 <p className="text-[#CA8A04] text-xl sm:text-2xl font-semibold">
                   {item.date}
                 </p>
-                <p className="text-gray-500 text-base sm:text-lg">
+                <p className="text-gray-500 text-5xl">
                   No <span className="font-medium">{index + 1}</span>
                 </p>
               </div>
@@ -87,9 +84,10 @@ const NoticeSection: React.FC = () => {
               </h3>
               <div className="flex justify-between items-center mt-6 text-gray-600 text-base sm:text-lg">
                 <span>{item.source}</span>
-                <span className="flex items-center gap-2 cursor-pointer hover:text-gray-800 transition-colors">
+
+                <span className="flex items-center gap-2 text-sm sm:text-base text-gray-700">
                   See more{" "}
-                  <span className="p-2 bg-gray-100 rounded-lg border border-gray-300">
+                  <span className="p-2 bg-gray-100 rounded-lg border-2 border-gray-300">
                     <FaArrowRight />
                   </span>
                 </span>

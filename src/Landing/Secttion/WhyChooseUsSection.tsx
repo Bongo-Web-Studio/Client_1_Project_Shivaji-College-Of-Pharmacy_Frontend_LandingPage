@@ -53,13 +53,13 @@ const features3: Feature[] = [
 const WhyChooseUsSection: React.FC = () => {
   return (
     <div className="p-4 md:p-6">
-      <section className="bg-[#101010] text-white p-6 md:p-12 rounded-[20px] md:rounded-[40px] max-w-[1600px] mx-auto">
+      <section className="bg-[#101010] text-white p-6 md:p-12 rounded-4xl md:rounded-[50px] max-w-[1600px] mx-auto">
         {/* Header Section */}
         <div className="text-center md:text-left">
           <h2 className="text-sm md:text-lg italic text-gray-400 font-medium">
             Why Choose Us
           </h2>
-          <h1 className="text-3xl sm:text-4xl md:text-6xl xl:text-7xl font-semibold leading-tight mb-6">
+          <h1 className="text-3xl sm:text-4xl md:text-6xl xl:text-7xl font-medium leading-tight mb-6">
             Empowering Pharma Professionals for Tomorrow
           </h1>
         </div>
@@ -74,14 +74,14 @@ const WhyChooseUsSection: React.FC = () => {
             </p>
           </div>
 
-          <div className="md:w-1/2 flex justify-center md:justify-end">
+          <div className="hidden  md:w-1/2 md:flex justify-center md:justify-start ">
             <div className="flex flex-wrap justify-center gap-6">
               {features2.map((feature) => (
                 <div
                   key={feature.id}
                   className="rounded-3xl p-6 bg-[#242424] w-[280px] sm:w-[300px] border border-white/40 text-center md:text-left"
                 >
-                  <div className="text-xl md:text-2xl text-[#CA8A04] font-semibold">
+                  <div className="text-xl md:text-2xl text-[#CA8A04] font-medium">
                     {feature.id}
                   </div>
                   <div className="mt-6 mb-4 flex justify-center md:justify-start">
@@ -107,7 +107,7 @@ const WhyChooseUsSection: React.FC = () => {
                 key={feature.id}
                 className="rounded-3xl p-6 bg-[#101010] w-[280px] sm:w-[300px] border border-white/40 text-center md:text-left"
               >
-                <div className="text-xl md:text-2xl text-[#CA8A04] font-semibold">
+                <div className="text-xl md:text-2xl text-[#CA8A04] font-medium">
                   {feature.id}
                 </div>
                 <div className="mt-6 mb-4 flex justify-center md:justify-start">
@@ -122,14 +122,36 @@ const WhyChooseUsSection: React.FC = () => {
               </div>
             ))}
           </div>
-
+          <div className=" md:hidden  flex justify-center md:justify-start">
+            <div className="flex flex-wrap justify-center gap-6">
+              {features2.map((feature) => (
+                <div
+                  key={feature.id}
+                  className="rounded-3xl p-6 bg-[#242424] w-[280px] sm:w-[300px] border border-white/40 text-center md:text-left"
+                >
+                  <div className="text-xl md:text-2xl text-[#CA8A04] font-medium">
+                    {feature.id}
+                  </div>
+                  <div className="mt-6 mb-4 flex justify-center md:justify-start">
+                    {feature.icon}
+                  </div>
+                  <h3 className="text-xl md:text-2xl mb-2 font-medium">
+                    {feature.title}
+                  </h3>
+                  <p className="text-sm md:text-md text-gray-400 line-clamp-4">
+                    {feature.description}
+                  </p>
+                </div>
+              ))}
+            </div>
+          </div>
           <div className="md:w-1/2 flex justify-center md:justify-end">
             {features3.map((feature) => (
               <div
                 key={feature.id}
                 className="rounded-3xl p-6 bg-[#101010] w-[280px] sm:w-[300px] border border-white/40 text-center md:text-left"
               >
-                <div className="text-xl md:text-2xl text-[#CA8A04] font-semibold">
+                <div className="text-xl md:text-2xl text-[#CA8A04] font-medium">
                   {feature.id}
                 </div>
                 <div className="mt-6 mb-4 flex justify-center md:justify-start">

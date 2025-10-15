@@ -1,6 +1,7 @@
-import CarouselComponent from "./Landing/Components/CarouselComponent";
+
 
 import AboutUsSection from "./Landing/Secttion/AboutUsSection";
+import CarouselSection from "./Landing/Secttion/CarouselSection";
 import CircularSection from "./Landing/Secttion/CircularSection";
 import ContactSection from "./Landing/Secttion/ContactSection";
 import EventsSection from "./Landing/Secttion/EventsSection";
@@ -19,7 +20,7 @@ export default function App() {
     <div className="w-full h-full overflow-hidden  relative">
       <NavbarSection />
       <HeroSection />
-      <CarouselComponent />
+      <CarouselSection />
       <MarqueeSection />
       <AboutUsSection />
       <CircularSection />
